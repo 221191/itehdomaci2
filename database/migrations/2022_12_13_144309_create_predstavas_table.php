@@ -15,7 +15,7 @@ class CreatePredstavasTable extends Migration
     {
         Schema::create('predstavas', function (Blueprint $table) {
             $table->id();
-            $table->string('sifraPredstave')->unique();
+            $table->integer('sifraPredstave');
             $table->string('imePredstave');
             $table->double('cenaKarte',8,2);
             $table->foreignId('reditelj_id')->constrained('rediteljs');

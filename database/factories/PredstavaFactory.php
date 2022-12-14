@@ -14,9 +14,9 @@ class PredstavaFactory extends Factory
     public function definition()
     {
         return [
-            'sifraPredstave' => $this->faker->randomDigitNotNull(),
+            'sifraPredstave' => $this->faker->numberBetween($min = 1, $max = 1000),
             'imePredstave' =>$this->faker->word(),
-            'reditelj_id' => Reditelj::factory()
+            'reditelj_id' =>Reditelj::factory()
         ];
     }
 }

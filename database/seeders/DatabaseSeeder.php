@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use Database\Seeders\PredstavaSeeder;
+use Database\Seeders\RediteljSeeder;
+use Database\Seeders\GlumacSeeder;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -13,6 +15,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $reditelj = new RediteljSeeder;
+        $glumac = new GlumacSeeder;
+        $predstava = new PredstavaSeeder;
+
+        $reditelj->run();
+        $glumac->run();
+        $predstava->run();
     }
 }
