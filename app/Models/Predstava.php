@@ -12,6 +12,13 @@ class Predstava extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'sifraPredstave',
+        'imePredstave',
+        'reditelj_id'
+    ];
+
+
     public function reditelj(){
         return $this->belongsTo(Reditelj::class);
     }

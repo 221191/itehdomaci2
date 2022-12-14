@@ -11,6 +11,13 @@ class Reditelj extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'imeReditelja',
+        'prezimeReditelja',
+        'godine'
+    ];
+
+
     public function predstave(){
         return $this->hasMany(Predstava::class);
     }

@@ -12,6 +12,12 @@ class Glumac extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'imeGlumca',
+        'prezimeGlumca',
+        'opisUloge'
+    ];
+
     public function predstave(){
         return $this->hasMany(Predstava::class);
     }
